@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.css">
   <title>Vanilla Weather App</title>
   <link rel="shortcut icon" href="images/AppIcon.png" type="image/png" sizes="96x96">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="has-background-primary-light">
+<body class="has-background-info-light">
   <header class="hero is-info">
     <div class="hero-body">
       <div class="container has-text-centered">
@@ -21,15 +22,16 @@
   </header>
   <main>
     <section class="section">
-      <div class="panel is-info">
+      <div class="panel is-info has-background-white">
         <h2 class="panel-heading title is-2">How is the weather at ... ?</h2>
         <form method="POST" class="panel-block has-text-centered">
           <div class="container">
             <div class="block">
-              <label class="label" for="search-bar">City:</label>
+              <label class="label is-uppercase" for="search-bar">City:</label>
               <div class="control">
                 <input class="input has-text-centered is-rounded" type="text" id="search-bar" placeholder="Example: Barcelona, SP" name="city"><br>
               </div>
+              <span class="help" id="msg"></span>
             </div>
             <div class="block">
               <button class="button is-info is-outlined is-uppercase" id="search-button" type="submit">Find weather</button>
@@ -39,27 +41,28 @@
       </div>
     </section>
     <section class="section">
-      <div class="box has-background-white-bis">
+      <div class="box has-background-white">
         <h2 class="title is-2 has-text-centered">Weather at:</h2>
         <div class="container">
-          <div class="columns is-justify-content-space-evenly has-text-centered">
+          <div class="columns is-justify-content-space-between has-text-centered">
             <div class="column is-3">
               <img id="weather-icon" src="images/AppIcon.png" alt="App Icon">
+              <figcaption class="subtitle is-7" id="icon-description">App Logo</figcaption>
             </div>
-            <div class="column is-2">
+            <div class="column is-4">
               <h3 class="title is-3" id="city-name">City Name</h3>
               <h4 class="title is-4" id="country">Country</h4>
             </div>
             <div class="column is-3">
-              <h3 class="title is-3" id="temperature">Temperature</h3>
-              <h5 class="title is-5" id="feels-like">Feels Like</h5>
+              <h3 class="title is-3" id="temp">Temp °F</h3>
+              <h5 class="title is-5" id="feels-like">Feels Like °F</h5>
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
-  <footer class="footer has-background-primary-light">
+  <footer class="footer has-background-info-light">
     <div class="content has-text-centered">
       <p>
         <strong>Vanilla Weather App</strong> by Diego Martinez Garcia <strong><a href="https://www.github.com/d-mg17">(github@d-mg17)</a></strong>. The front-end was made using <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The weather data is provided by <a href="https://openweathermap.org">OpenWeatherMap</a>.
@@ -67,10 +70,11 @@
     </div>
     <div class="content has-text-centered">
       <p>
-        <strong>Contact me:  <a href="mailto:d.mg12@outlook.com>">Mail</a> | <a href="https://www.linkedin.com/in/d-mg17/">LinkedIn</a></strong>
+        <strong>Contact me:  <a href="mailto:d.mg17@outlook.com">Mail</a> | <a href="https://www.linkedin.com/in/d-mg17/">LinkedIn</a></strong>
       </p>
     </div>
   </footer>
   <script type="text/javascript" src="index.js"></script>
+  <script type="module" src="index.js"></script>
 </body>
 </html>
