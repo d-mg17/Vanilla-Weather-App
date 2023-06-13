@@ -5,7 +5,7 @@
 Simple weather web app using HTML, CSS, and JavaScript to display current weather information. The web app will allow users to search for a specific city and retrieve weather data in real-time. Utilize  OpenWeatherMap API to fetch weather data based on the user's input. Display relevant information such as temperature, weather description, country and "Feels Like" temperature on the app interface. Used Bulma CSS to style the app, providing an intuitive and visually appealing design.
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/d-mg17}/Vanilla-Weather-App?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/d-mg17/vanilla-weather-app?color=56BEB8">
 
   <img alt="Github language count" src="https://img.shields.io/github/languages/count/d-mg17/vanilla-weather-app?color=56BEB8">
 
