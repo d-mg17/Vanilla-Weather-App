@@ -6,55 +6,71 @@
   <meta name="description" content="Vanilla Weather App using ">
   <meta name="keywords" content="HTML, CSS, JS, JavaScript, Weather App, Vanilla Weather App">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.css">
   <title>Vanilla Weather App</title>
   <link rel="shortcut icon" href="images/AppIcon.png" type="image/png" sizes="96x96">
 </head>
-<body class="bg-light">
-  <main class="container m-auto p-4 p-md-3 p-sm-1">
-    <div class="container">
-      <div class="bg-primary border rounded-pill text-center border-primary">
+<body class="has-background-primary-light">
+  <header class="hero is-info">
+    <div class="hero-body">
+      <div class="container has-text-centered">
         <img src="images/AppIcon.png" alt="App Icon">
-        <h1 class="h1 display-4 text-light">Vanilla Weather App</h1>
+        <h1 class="title is-1">Vanilla Weather App</h1>
       </div>
     </div>
-    <hr><br>
   </header>
-  <div class="container">
-      <h2 class="h2 display-6">Find weather at:</h2>
-      <div class="container text-center justify-content-center">
-        <form method="POST">
-          <label class="form-label" for="search-bar">City:</label>
-          <input class="form-control text-center" type="text" id="search-bar" placeholder="Example: Barcelona, SP" name="city"><br>
-          <button class="btn btn-outline-primary" id="search-button" type="submit">Search</button>
+  <main>
+    <section class="section">
+      <div class="panel is-info">
+        <h2 class="panel-heading title is-2">How is the weather at ... ?</h2>
+        <form method="POST" class="panel-block has-text-centered">
+          <div class="container">
+            <div class="block">
+              <label class="label" for="search-bar">City:</label>
+              <div class="control">
+                <input class="input has-text-centered is-rounded" type="text" id="search-bar" placeholder="Example: Barcelona, SP" name="city"><br>
+              </div>
+            </div>
+            <div class="block">
+              <button class="button is-info is-outlined is-uppercase" id="search-button" type="submit">Find weather</button>
+            </div>
+          </div>
         </form>
       </div>
-    </div>
-    <br><hr><br>
-    <section>
-      <div class="container">
-        <div class="container bg-info-subtle">
-          <div class="weather-info-left">
-            <h3>City Name</h3>
-            <h4>Country</h4>
-            <h5>Weather Description</h5>
-          </div>
-          <div class="weather-info-right">
-            <h3>Temperature</h3>
-            <h4>Feels Like</h4>
-            <h5>Humidity</h5>
+    </section>
+    <section class="section">
+      <div class="box has-background-white-bis">
+        <h2 class="title is-2 has-text-centered">Weather at:</h2>
+        <div class="container">
+          <div class="columns is-justify-content-space-evenly has-text-centered">
+            <div class="column is-3">
+              <img id="weather-icon" src="images/AppIcon.png" alt="App Icon">
+            </div>
+            <div class="column is-2">
+              <h3 class="title is-3" id="city-name">City Name</h3>
+              <h4 class="title is-4" id="country">Country</h4>
+            </div>
+            <div class="column is-3">
+              <h3 class="title is-3" id="temperature">Temperature</h3>
+              <h5 class="title is-5" id="feels-like">Feels Like</h5>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </main>
-  <footer>
-
+  <footer class="footer has-background-primary-light">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Vanilla Weather App</strong> by Diego Martinez Garcia <strong><a href="https://www.github.com/d-mg17">(github@d-mg17)</a></strong>. The front-end was made using <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The weather data is provided by <a href="https://openweathermap.org">OpenWeatherMap</a>.
+      </p>
+    </div>
+    <div class="content has-text-centered">
+      <p>
+        <strong>Contact me:  <a href="mailto:d.mg12@outlook.com>">Mail</a> | <a href="https://www.linkedin.com/in/d-mg17/">LinkedIn</a></strong>
+      </p>
+    </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
   <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
